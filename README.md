@@ -16,7 +16,7 @@ Based upon django-database-files by [Kimetrica](https://github.com/kimetrica/dja
 
 Requires:
 
-  * Django 2.2 - 4.0
+  * Django 2.2 - 5.0
 
 Installation
 ------------
