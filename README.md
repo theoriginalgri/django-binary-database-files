@@ -12,11 +12,11 @@ but there are some valid use cases. If your Django app is behind a caching
 reverse proxy and you need to scale your application servers, it may be
 simpler to store files in the database.
 
-Based upon django-database-files by [Kimetrica](https://github.com/kimetrica/django-database-files), [rhunwicks](https://github.com/rhunwicks/django-database-files), [chrisspen](https://github.com/chrisspen/django-database-files-3000), [bfirsh](https://github.com/bfirsh/django-database-files) but updated to work with Django 2.2-4.0, Python 3.6+ and to use a binary field for storage.
+Based upon django-database-files by [Kimetrica](https://github.com/kimetrica/django-database-files), [rhunwicks](https://github.com/rhunwicks/django-database-files), [chrisspen](https://github.com/chrisspen/django-database-files-3000), [bfirsh](https://github.com/bfirsh/django-database-files) but updated to work with Django 2.2-5.2, Python 3.6+ and to use a binary field for storage.
 
 Requires:
 
-  * Django 2.2 - 5.0
+  * Django 2.2 - 5.2
 
 Installation
 ------------
@@ -103,19 +103,19 @@ Tests require the Python development headers to be installed, which you can inst
 
 To run unittests across multiple Python versions, install:
 
-    sudo apt-get install python3.10-minimal python3.10-dev python3.11-minimal python3.11-dev python3.12-minimal python3.12-dev
+    sudo apt-get install python3.10-minimal python3.10-dev python3.11-minimal python3.11-dev python3.12-minimal python3.12-dev python3.13-minimal python3.13-dev
 
 To run all [tests](http://tox.readthedocs.org/en/latest/):
 
     export TESTNAME=; tox
 
-To run tests for a specific environment (e.g. Python 3.12 with Django 5.0):
+To run tests for a specific environment (e.g. Python 3.13 with Django 5.0):
 
-    export TESTNAME=; tox -e py312-django50
+    export TESTNAME=; tox -e py313-django50
 
 To run a specific test:
 
-    export TESTNAME=.test_adding_file; tox -e py312-django50
+    export TESTNAME=.test_adding_file; tox -e py313-django50
 
 To build and deploy a versioned package to PyPI, verify [all unittests are passing](https://travis-ci.com/kimetrica/django-binary-database-files/), then increase (and commit) the version number in `binary_database_files/__init__.py` and then run:
 
