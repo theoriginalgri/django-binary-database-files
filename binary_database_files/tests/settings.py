@@ -19,6 +19,8 @@ MEDIA_ROOT = os.path.join(PROJECT_DIR, "media")
 
 USE_TZ = True
 
+DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
+
 SECRET_KEY = "secret"  # noqa: S105
 
 AUTH_USER_MODEL = "auth.User"
@@ -29,7 +31,7 @@ BASE_SECURE_URL = "https://localhost"
 
 BASE_URL = "http://localhost"
 
-MIDDLEWARE_CLASSES = (
+MIDDLEWARE = (
     "django.middleware.common.CommonMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",

@@ -34,7 +34,9 @@ class File(models.Model):
     def __str__(self):
         return self.name
 
-    def save(self, *args, **kwargs):
+    def save(
+        self, *, force_insert=False, force_update=False, using=None, update_fields=None
+    ):
 
         # Check for and clear old content hash.
         if self.id:
@@ -45,7 +47,12 @@ class File(models.Model):
         # Recalculate new content hash.
         self.content_hash
 
-        return super(File, self).save(*args, **kwargs)
+        return super().save(
+            force_insert=force_insert,
+            force_update=force_update,
+            using=using,
+            update_fields=update_fields,
+        )
 
     @property
     def content_hash(self):

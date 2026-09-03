@@ -1,7 +1,7 @@
-from django.urls import re_path
+from django.urls import path
 
 from binary_database_files import views
 
 urlpatterns = [
-    re_path(r"^files/(?P<name>.+)$", views.serve_mixed, name="database_file"),
+    path("files/<path:name>", views.serve_mixed, name="database_file"),
 ]
