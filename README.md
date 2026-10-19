@@ -12,12 +12,12 @@ but there are some valid use cases. If your Django app is behind a caching
 reverse proxy and you need to scale your application servers, it may be
 simpler to store files in the database.
 
-Based upon django-database-files by [Kimetrica](https://github.com/kimetrica/django-database-files), [rhunwicks](https://github.com/rhunwicks/django-database-files), [chrisspen](https://github.com/chrisspen/django-database-files-3000), [bfirsh](https://github.com/bfirsh/django-database-files) but updated to work with Django 4.2-6.1, Python 3.10-3.14 and to use a binary field for storage.
+Based upon django-database-files by [Kimetrica](https://github.com/kimetrica/django-database-files), [rhunwicks](https://github.com/rhunwicks/django-database-files), [chrisspen](https://github.com/chrisspen/django-database-files-3000), [bfirsh](https://github.com/bfirsh/django-database-files) but updated to work with Django 4.2-6.1, Python 3.10-3.15 and to use a binary field for storage.
 
 Requires:
 
   * Django 4.2-6.1
-  * Python 3.10-3.14
+  * Python 3.10-3.15 (Python 3.15 requires Django 6.1)
 
 Installation
 ------------
@@ -104,7 +104,7 @@ Code should be linted with:
 
 Tests require the Python development headers to be installed, which you can install on Ubuntu with:
 
-    sudo apt-get install python3.14-minimal python3.14-dev
+    sudo apt-get install python3.15-minimal python3.15-dev
 
 To run unittests across multiple Python versions, install:
 
